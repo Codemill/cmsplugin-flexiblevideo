@@ -10,6 +10,7 @@ setup(
     author_email = 'opensource@codemill.se',
     url = 'http://github.com/codemill/cmsplugin-flexiblevideo',
     packages = find_packages(),
+    include_package_data=True,
     install_requires = [
         'django-cms>=2.1',
     ],
