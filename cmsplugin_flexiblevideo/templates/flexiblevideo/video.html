@@ -29,14 +29,13 @@
             jQuery('.cmsplugin_flexiblevideo').each(function() {
                 var cover = jQuery(this).find('.cmsplugin_flexiblevideo_cover')
                 var video = jQuery(this).find('.cmsplugin_flexiblevideo_video')
-				var iframe = video.find('iframe');
+                var iframe = video.find('iframe');
 
                 cover.click(function() {
-					iframe.attr('src', iframe.attr('data-src'));
+                    iframe.attr('src', iframe.attr('data-src'));
                     video.show();
                     cover.hide();
                 });
-				
             });
         });
     </script>
@@ -47,7 +46,7 @@
     </div>
     <div class="cmsplugin_flexiblevideo_video">
         {% if video_type == 'vimeo' %}
-            <iframe src="//player.vimeo.com/video{{ video_id }}?title=0&byline=0&portrait=0&color=ffffff&autoplay=1" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+            <iframe src="" data-src="//player.vimeo.com/video{{ video_id }}?title=0&byline=0&portrait=0&color=ffffff&autoplay=1" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
         {% endif %}
         {% if video_type == 'youtube' %}
             <iframe type="text/html" src="" data-src="//www.youtube.com/embed/{{ video_id }}?wmode=transparent&autoplay=1" frameborder="0"></iframe>
